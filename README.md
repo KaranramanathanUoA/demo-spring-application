@@ -29,7 +29,7 @@ CREATE TABLE Car (
   model VARCHAR(5000) NOT NULL
 );
 ```
-- Run the following queries in the SQL Query editor (These specific values are required since the integration tests assume that you already have the follwoing records saved in the DB):
+- Run the following queries in the SQL Query editor (These specific values are required since the integration tests assume that you already have the following records saved in the DB):
 ```
 Insert into Car (id, color, model) values (1, "Blue", "Nissan Mazda");
 Insert into Car (id, color, model) values (2, "Black", "Subaru Impreza");
