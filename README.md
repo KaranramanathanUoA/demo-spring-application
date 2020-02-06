@@ -29,9 +29,11 @@ CREATE TABLE Car (
   model VARCHAR(5000) NOT NULL
 );
 ```
-- Add some values to the table using the following query:
+- Run the following queries in the SQL Query editor (These specific values are required since the integration tests assume that you already have the follwoing records saved in the DB):
 ```
 Insert into Car (id, color, model) values (1, "Blue", "Nissan Mazda");
+Insert into Car (id, color, model) values (2, "Black", "Subaru Impreza");
+Insert into Car (id, color, model) values (3, "White", "Toyota Corolla")
 ```
 
 - You will also need to add the database as a data source in your IDE. This can be done by following the steps in [Link](https://stackoverflow.com/a/42498233/8425514)
@@ -53,4 +55,5 @@ Insert into Car (id, color, model) values (1, "Blue", "Nissan Mazda");
 { "vehicleId": value , "color" : "value", "model" : "value"}
 ```
 - Unit tests and integration tests have also been written for this application.
-- To run the tests, navigate to src/main/test/java/com.example.demoProject.demo and simply press the run button for the 2 files present in the directory. 
+- To run the unit tests present in the file DemoApplicationWeblayerTests, navigate to src/main/test/java/com.example.demoProject.demo/ DemoApplicationWeblayerTests and simply press the run button for the 2 files present in the directory. 
+- To run the integration tests, you will have to ensure that the DemoApplication is running before trigerring these tests as these tests make use of live responses from the server.
